@@ -65,14 +65,37 @@ func makeASandwich(statusHambre : String)throws{
     if response == true{
         print("Su sabdwich está en proceso de preparación.¡Buen provecho!")
     }else if response == false {
-        print("Le notificaremos en una hora si gusta que le hagan un sandwich")
+        assert(response == false, "Vuelve cuando tengas hambre")
     } else {
         print("Ingrese True si tiene hambre o FALSE si no tiene apetito")
     }
 }
 do{
-    try makeASandwich(statusHambre: "true")
+    try makeASandwich(statusHambre: "false")
 } catch {
     print("Notificaremos en un hora si tiene hambre")
 }
 
+var ji: UInt8 = 3
+precondition(ji <= 4, "ji tiene que ser menor que 4")
+
+
+/*
+ Ejercicio 1:
+ Crear un aplicacion donde pueda escribir el color de mi auto, la cantidad de puertas y marca.
+ 
+ Ejercicio 2:
+ Hacer una aplicación de peleas de campeones de league of legends donde tengangamos instanciados campeones, puede elegir campeones y que me diga quien gano.
+ metodo campeon 1 vs campeon 2 que me diga cuál campeón ganó y su nombre
+ 
+ Ejercicio 3:
+ Hacer el menu de la cafetería
+ y que un metodo me diga cuanto cuesta y cuanto tarda en hacerlo
+ PD. Y que me diga una hora estimada a partir de cuando hice la consulta.
+ [tip: tipo de dato date]
+ 
+ ejercicio 4:
+ Hacer un login
+ Cuando ya se haya hecho el login Dar un mensaje de bienvenida.
+ 
+*/
